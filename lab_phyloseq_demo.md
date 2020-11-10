@@ -51,7 +51,7 @@ GP <- prune_species(speciesSums(GlobalPatterns) > 0, GlobalPatterns)
 plot_richness(GP)
 ```
 
-![](lab_phyloseq_demo_files/figure-markdown_github/unnamed-chunk-1-1.png)
+![](lab_phyloseq_demo_files/figure-markdown_github/alpahdiversi%20physeq-1.png)
 
 ``` r
 data("GlobalPatterns")
@@ -62,4 +62,10 @@ plot_heatmap(gpt, sample.label="SampleType")
 
     ## Warning: Transformation introduced infinite values in discrete y-axis
 
-![](lab_phyloseq_demo_files/figure-markdown_github/unnamed-chunk-2-1.png)
+![](lab_phyloseq_demo_files/figure-markdown_github/heatmap-1.png)
+
+``` r
+plot_bar(gpt)
+```
+
+![](lab_phyloseq_demo_files/figure-markdown_github/unnamed-chunk-1-1.png)
