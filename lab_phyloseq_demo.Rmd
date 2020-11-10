@@ -16,7 +16,7 @@ knitr::opts_chunk$set(echo = TRUE)
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
 When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-```{r}
+```{r alpahdiversi physeq}
 library("phyloseq"); packageVersion("phyloseq")
 data("GlobalPatterns")
 library("ggplot2"); packageVersion("ggplot2")
@@ -32,9 +32,14 @@ scale_fill_discrete <-  function(palname=pal, ...){
 GP <- prune_species(speciesSums(GlobalPatterns) > 0, GlobalPatterns)
 plot_richness(GP)
 ```
-```{r}
+```{r heatmap}
 data("GlobalPatterns")
 gpt <- subset_taxa(GlobalPatterns, Kingdom=="Bacteria")
 gpt <- prune_taxa(names(sort(taxa_sums(gpt),TRUE)[1:300]), gpt)
 plot_heatmap(gpt, sample.label="SampleType")
 ```
+
+```{r}
+plot_bar(gpt)
+```
+
